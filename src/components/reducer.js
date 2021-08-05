@@ -9,6 +9,12 @@ export const reducer = (state, action) => {
             }),
         };
     }
+    if(action.type === 'Clear_Cart'){
+        return {
+            ...state,
+            item:[]
+        }
+    }
     return state;
 }
 

@@ -24,9 +24,15 @@ const Cart = () => {
             payload: id,
         });
     }
+
+    const clearCart = () =>{
+        return dispatch({
+            type:'Clear_Cart'
+        })
+    }
     return (
         <React.Fragment>
-            <CartContext.Provider value={{ ...state, removeItem }}>
+            <CartContext.Provider value={{ ...state, removeItem,clearCart }}>
                 <Contextdata />
             </CartContext.Provider>
         </React.Fragment>
