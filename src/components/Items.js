@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from './Cart';
+
 
 const Items = ({ id, title, description, price, img, amount }) => {
     console.log(' ITEM id :', title);
+    const { removeItem } = useContext(CartContext)
     return (
         <React.Fragment>
             <div style={{ width: '100%', display: 'flex', justifyContent: 'space-evenly' }}>
@@ -25,7 +28,7 @@ const Items = ({ id, title, description, price, img, amount }) => {
                     <h1 style={{ textAlign: 'center', marginTop: '23px' }}>{price}</h1>
                 </div>
                 <div style={{ width: '20%', textAlign: 'center' }}>
-                    <img src="./images/close.png" alt="close" style={{ marginTop: '20px' }} />
+                    <img src="./images/close.png" alt="close" style={{ marginTop: '20px' }} onClick={() => removeItem(id)} />
                 </div>
             </div>
         </React.Fragment>

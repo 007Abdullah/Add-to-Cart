@@ -4,7 +4,7 @@ import Item from './Items';
 import { CartContext } from './Cart';
 
 const Contextdata = () => {
-    const item = useContext(CartContext);
+    const { item } = useContext(CartContext);
     return (
         <React.Fragment>
             <header>
