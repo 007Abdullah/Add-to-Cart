@@ -9,11 +9,35 @@ export const reducer = (state, action) => {
             }),
         };
     }
-    if(action.type === 'Clear_Cart'){
+    if (action.type === 'Clear_Cart') {
         return {
             ...state,
-            item:[]
+            item: []
         }
+    }
+    if (action.type === 'INCREMENT') {
+        let whichClickCart = state.item.map((eachItem, index) => {
+            if (eachItem.id === action.payload) {
+                return {
+                    ...eachItem,
+                    quantity: eachItem.quantity + 1
+                }
+            }
+            return eachItem;
+        })
+        return { ...state, item: whichClickCart };
+    }
+    if (action.type === 'DECREMENT') {
+        let whichClickDegre = state.item.map((eactItems, index) => {
+            if (eactItems.id === action.payload) {
+                return {
+                    ...eactItems,
+                    quantity: eactItems.quantity - 1
+                }
+            }
+            return eactItems;
+        })
+        return { ...state, item: whichClickDegre }
     }
     return state;
 }

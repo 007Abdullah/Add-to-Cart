@@ -25,14 +25,27 @@ const Cart = () => {
         });
     }
 
-    const clearCart = () =>{
+    const clearCart = () => {
         return dispatch({
-            type:'Clear_Cart'
+            type: 'Clear_Cart'
+        });
+    }
+
+    const increment = (id) => {
+        return dispatch({
+            type: 'INCREMENT',
+            payload: id,
+        });
+    }
+    const decrement = (id) => {
+        return dispatch({
+            type: 'DECREMENT',
+            payload: id
         })
     }
     return (
         <React.Fragment>
-            <CartContext.Provider value={{ ...state, removeItem,clearCart }}>
+            <CartContext.Provider value={{ ...state, removeItem, clearCart, increment, decrement }}>
                 <Contextdata />
             </CartContext.Provider>
         </React.Fragment>

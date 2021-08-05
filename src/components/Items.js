@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { CartContext } from './Cart';
 
 
-const Items = ({ id, title, description, price, img, amount }) => {
+const Items = ({ id, title, description, price, img, quantity }) => {
     console.log(' ITEM id :', title);
-    const { removeItem } = useContext(CartContext)
+    const { removeItem, increment, decrement } = useContext(CartContext)
     return (
         <React.Fragment>
             <div style={{ width: '100%', display: 'flex', justifyContent: 'space-evenly' }}>
@@ -19,9 +19,9 @@ const Items = ({ id, title, description, price, img, amount }) => {
                 </div>
                 <div style={{ width: '20%' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '25px' }}>
-                        <img src="./images/minus.png" alt="minus" />
-                        <input type="text" placeholder="2" style={{ width: '20px', textAlign: 'center' }} />
-                        <img src="./images/plus.png" alt="plus" />
+                        <img src="./images/minus.png" alt="minus" onClick={() => decrement(id)} />
+                        <input type="text" placeholder={quantity} style={{ width: '20px', textAlign: 'center' }} />
+                        <img src="./images/plus.png" alt="plus" onClick={() => increment(id)} />
                     </div>
                 </div>
                 <div style={{ width: '20%' }}>

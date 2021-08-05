@@ -5,7 +5,7 @@ export const products = [
         description: 'Black in color',
         price: '250$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const products = [
         description: 'Black in color',
         price: '650$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const products = [
         description: 'Black in color',
         price: '750$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const products = [
         description: 'Black in color',
         price: '850$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const products = [
         description: 'Black in color',
         price: '950$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ export const products = [
         description: 'Black in color',
         price: '1050$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ export const products = [
         description: 'Black in color',
         price: '1250$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
     {
         id: 8,
@@ -61,6 +61,6 @@ export const products = [
         description: 'Black in color',
         price: '2250$',
         img: 'https://cdn.mos.cms.futurecdn.net/wAeDcpDmZrBecNdDt39QZa-1200-80.jpg',
-        amount: 1,
+        quantity: 1,
     },
 ]
