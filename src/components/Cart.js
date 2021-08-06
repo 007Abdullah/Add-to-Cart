@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import { products } from './../products';
 import './cart.css';
 import Contextdata from './Contextdata';
@@ -43,6 +43,13 @@ const Cart = () => {
             payload: id
         })
     }
+
+    useEffect(() => {
+        dispatch({
+            type: 'GET_TOTAL'
+        });
+    }, [state.item]);
+
     return (
         <React.Fragment>
             <CartContext.Provider value={{ ...state, removeItem, clearCart, increment, decrement }}>

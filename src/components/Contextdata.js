@@ -4,31 +4,32 @@ import Item from './Items';
 import { CartContext } from './Cart';
 
 const Contextdata = () => {
-    const { item,clearCart } = useContext(CartContext);
+    const { item, clearCart, totalItem } = useContext(CartContext);
 
-    if(item.length === 0){
+
+    if (item.length === 0) {
         return (
             <React.Fragment>
-                     <header>
-                <div style={{ width: '80%', display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid black', margin: '0 auto', position: 'relative' }}>
-                    <div className="header">
-                        <img src="./images/backarrow.png" alt="back" />
-                        <h3 style={{ marginTop: '35px' }}>Continue Shopping</h3>
+                <header>
+                    <div style={{ width: '80%', display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid black', margin: '0 auto', position: 'relative' }}>
+                        <div className="header">
+                            <img src="./images/backarrow.png" alt="back" />
+                            <h3 style={{ marginTop: '35px' }}>Continue Shopping</h3>
+                        </div>
+                        <div className="second-main">
+                            <img src="./images/backet.png" alt="backet" style={{ width: '80px' }} />
+                            <p className="paraStyle">0</p>
+                        </div>
                     </div>
-                    <div className="second-main">
-                        <img src="./images/backet.png" alt="backet" style={{ width: '80px' }} />
-                        <p className="paraStyle">0</p>
+                </header>
+                <section className="main-cart-section">
+                    <div style={{ width: '100%', marginBottom: '30px' }}>
+                        <h1>Shopping Cart</h1>
+                        <br />
+                        <p>You Have <span><b>0</b></span> Items In Shopping Cart</p>
                     </div>
-                </div>
-            </header>
-            <section className="main-cart-section">
-                <div style={{ width: '100%', marginBottom: '30px' }}>
-                    <h1>Shopping Cart</h1>
-                    <br />
-                    <p>You Have <span><b>0</b></span> Items In Shopping Cart</p>
-                </div>
                 </section>
-                </React.Fragment>
+            </React.Fragment>
         )
     }
 
@@ -50,7 +51,7 @@ const Contextdata = () => {
                 <div style={{ width: '100%', marginBottom: '30px' }}>
                     <h1>Shopping Cart</h1>
                     <br />
-                    <p>You Have <span><b>4</b></span> Items In Shopping Cart</p>
+                    <p>You Have <span><b>{totalItem}</b></span> Items In Shopping Cart</p>
                 </div>
                 <div className="cart-Item">
                     <div className="center-scroll-part">
