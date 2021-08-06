@@ -36,6 +36,8 @@ export const reducer = (state, action) => {
                 }
             }
             return eactItems;
+        }).filter((eachItem) => {
+            return eachItem.quantity !== 0;
         })
         return { ...state, item: whichClickDegre }
     }
